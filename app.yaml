@@ -1,0 +1,11 @@
+runtime: python312
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+- url: /public
+  static_dir: public
+- url: /(.+\.jpg) 
+  static_files: \1
+  upload: (.+\.jpg)
