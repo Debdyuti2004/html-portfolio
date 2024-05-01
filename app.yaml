@@ -4,8 +4,14 @@ handlers:
 - url: /
   static_files: index.html
   upload: index.html
+- url: /(.+\.html)
+  static_files: \1
+  upload: (.+\.html)
 - url: /public
   static_dir: public
 - url: /(.+\.jpg) 
   static_files: \1
   upload: (.+\.jpg)
+- url: /(.+\.css)
+  static_files: \1
+  upload: (.+\.css)
